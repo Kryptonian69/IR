@@ -1,21 +1,25 @@
 # Practical 19
 # Source: IR_Question_15_April_2025_900_1100 (2).pdf, Page 20
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+import re
 
-def extractive_summarize(text, num_sentences=2):
-    sentences = [s.strip() for s in text.split('.') if s.strip()]
-    if not sentences: return ""
-    tfidf_vectorizer = TfidfVectorizer()
-    tfidf_matrix = tfidf_vectorizer.fit_transform(sentences)
-    cosine_similarities = cosine_similarity(tfidf_matrix, tfidf_matrix)
-    sentence_scores = cosine_similarities.mean(axis=1)
-    top_indices = np.argsort(sentence_scores)[-num_sentences:]
-    summary = [sentences[i] for i in sorted(top_indices)]
-    return '. '.join(summary)
+class NaiveBayesClassifier:
+    def __init__(self):
+        self.vocab, self.pos_counts, self.neg_counts, self.p_prior, self.n_prior = [], None, None, 0, 0
 
-# Example usage
-text = "Natural language processing is a field of AI. It involves interactions between computers and humans. Summarization is a common task."
-print("--- Extractive Summary ---")
-print(extractive_summarize(text))
+    def preprocess(self, text): return re.findall(r'\b\w+\b', text.lower())
+
+    def train(self, X, y):
+        self.vocab = list(set([t for text in X for t in self.preprocess(text)]))
+        self.pos_counts, self.neg_counts = np.zeros(len(self.vocab)), np.zeros(len(self.vocab))
+        for text, label in zip(X, y):
+            vec = np.zeros(len(self.vocab))
+            for t in self.preprocess(text): vec[self.vocab.index(t)] += 1
+            if label == 'positive': self.pos_counts += vec
+            else: self.neg_counts += vec
+        self.p_prior = sum(1 for label in y if label == 'positive') / len(y)
+        self.n_prior = 1 - self.p_prior
+        print("Model trained.")
+
+if __name__ == "__main__":
+    NaiveBayesClassifier().train(["The movie was amazing", "Terrible movie"], ["positive", "negative"])

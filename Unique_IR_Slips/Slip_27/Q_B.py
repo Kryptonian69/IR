@@ -1,38 +1,44 @@
 # Practical 27
 # Source: IR_Question_15_April_2025_1130_130.pdf, Page 16
-from collections import defaultdict
 import re
+from collections import defaultdict
 
-class InvertedIndex:
+class DocumentRetrievalSystem:
     def __init__(self):
         self.index = defaultdict(set)
+        self.documents = {}
 
-    def add_document(self, doc_id, text):
-        words = self._preprocess(text)
-        for word in words:
-            self.index[word].add(doc_id)
+    def tokenize(self, text):
+        return re.findall(r'\b\w+\b', text.lower())
 
-    def _preprocess(self, text):
-        # Tokenization
-        words = re.findall(r'\b\w+\b', text.lower())
-        # Stopword Removal (can be expanded)
-        stopwords = {'a', 'an', 'the', 'is', 'are', 'in', 'on', 'at', 'to', 'for', 'of'}
-        words = [word for word in words if word not in stopwords]
-        # Stemming or Lemmatization (optional)
-        # Add stemming or lemmatization algorithm here if needed
-        return words
+    def index_document(self, doc_id, text):
+        tokens = self.tokenize(text)
+        for token in tokens:
+            self.index[token].add(doc_id)
+        self.documents[doc_id] = text
 
-    def search(self, query):
-        words = self._preprocess(query)
-        result = set()
-        for word in words:
-            if word in self.index:
-                result |= self.index[word] # Union of sets
-        return result
+    def retrieve_documents(self, query):
+        tokens = self.tokenize(query)
+        relevant_doc_ids = set()
+        for token in tokens:
+            if token in self.index:
+                if not relevant_doc_ids:
+                    relevant_doc_ids.update(self.index[token])
+                else:
+                    relevant_doc_ids.intersection_update(self.index[token])
+        return [(doc_id, self.documents[doc_id]) for doc_id in relevant_doc_ids]
 
-# Example usage
-index = InvertedIndex()
-index.add_document(1, "This is a sample document")
-index.add_document(2, "Another document for testing")
-index.add_document(3, "Yet another example document")
-print(index.search("sample document"))
+if __name__ == "__main__":
+    doc_retrieval = DocumentRetrievalSystem()
+    doc1 = "best of luck tycs students for your practical examination."
+    doc2 = "tycs students please carry your journal at the time of practical examination."
+    doc_retrieval.index_document("document1", doc1)
+    doc_retrieval.index_document("document2", doc2)
+
+    query = "tycs journal"
+    results = doc_retrieval.retrieve_documents(query)
+
+    print("Query:", query)
+    print("-" * 30)
+    for doc_id, text in results:
+        print(f"Match found in {doc_id}: {text}")

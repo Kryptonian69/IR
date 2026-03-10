@@ -1,44 +1,15 @@
 # Practical 20
 # Source: IR_Question_15_April_2025_1130_130.pdf, Page 1
-class BooleanRetrieval:
-    def __init__(self, index):
-        self.index = index
-
-    def boolean_search(self, query):
-        query = query.lower()
-        terms = query.split()
-
-        if 'and' in terms:
-            intersection = None
-            for term in terms:
-                if term != 'and':
-                    if intersection is None:
-                        intersection = self.index.get(term, set())
-                    else:
-                        intersection &= self.index.get(term, set())
-            return intersection if intersection is not None else set()
-
-        elif 'or' in terms:
-            union = set()
-            for term in terms:
-                if term != 'or':
-                    union |= self.index.get(term, set())
-            return union
-
-        elif 'not' in terms:
-            complement = self.index.keys()
-            for term in terms:
-                if term != 'not':
-                    complement -= self.index.get(term, set())
-            return complement
-        else:
-            return self.index.get(query, set())
-
-# Example usage
-index = {
-    'apple': {1, 2, 3},
-    'banana': {2, 3, 4},
-    'orange': {3, 4, 5}
-}
-boolean_retrieval = BooleanRetrieval(index)
-print(boolean_retrieval.boolean_search("apple and banana"))
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+corpus = [" 'this is the first document", " 'this document is the second document", " 'And this is the third one", " 'Is this the first document?' and process the query “first and third”"]
+vectorizer = CountVectorizer()
+x = vectorizer.fit_transform(corpus)
+df = pd.DataFrame(x.toarray(), columns=vectorizer.get_feature_names_out())
+print("DataFrame:\n", df)
+alldata = df[(df['first']==1) & (df['third']==1)]
+print("AND query (this, first):", alldata.index.tolist())
+ordata = df[(df['this']==1) | (df['first']==1)]
+print("OR query (this, first):", ordata.index.tolist())
+notdata = df[(df['and']!=1)]
+print("NOT query (and):", notdata.index.tolist())

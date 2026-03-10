@@ -1,38 +1,38 @@
 # IR Exam Slips Master List
 
-| Slip | Part A Summary | Part B Summary |
-|------|----------------|----------------|
-| Slip 1 | Implement an inverted index construction algorithm... | Build a question-answering system using techniques... |
-| Slip 2 | Implement an inverted index construction algorithm... | Write a program to calculate precision, recall and... |
-| Slip 3 | Develop a spelling correction module using edit di... | Implement the Boolean retrieval model for the foll... |
-| Slip 4 | Develop a web crawler to fetch and index web pages... | Handle challenges such as robots.txt, dynamic cont... |
-| Slip 5 | Consider a simplified web graph with the following... | Implement a text summarization algorithm (e.g., ex... |
-| Slip 6 | Implement cosine similarity to find similarity bet... | Build a question-answering system using techniques... |
-| Slip 7 | Implement a text summarization algorithm (e.g., ex... | Implement the Boolean retrieval model for the foll... |
-| Slip 8 | Implement the vector space model with TF-IDF weigh... | Calculate the cosine similarity between the query ... |
-| Slip 9 | Write a program to calculate precision, recall and... | Use an evaluation toolkit to measure average preci... |
-| Slip 10 | Given a dataset of 20_newsgroups, build a classifi... | Given a dataset of 20_newsgroups, build a classifi... |
-| Slip 11 | Consider the following corpus: "India has the seco... | Write a program to calculate precision, recall and... |
-| Slip 12 | Consider a simplified web graph with the following... | Write a program to calculate precision, recall and... |
-| Slip 13 | Consider a web graph with the following link struc... | Implement a text summarization algorithm [20] 40... |
-| Slip 14 | Implement the vector space model with TF-IDF weigh... | Implement cosine similarity to find similarity bet... |
-| Slip 15 | Apply the clustering algorithm(e.g., K-means or hi... | Given a set of predicted binary labels (y_pred) an... |
-| Slip 16 | Implement an inverted index construction algorithm... | Build a simple document retrieval system using the... |
-| Slip 17 | Implement the vector space model with TF-IDF weigh... | Implement a clustering algorithm (e.g., K-means or... |
-| Slip 18 | Consider a simplified web graph with the following... | Implement the Boolean retrieval model for the foll... |
-| Slip 19 | Consider the following corpus: "India has the seco... | Create a system that can summarize text data. The ... |
-| Slip 20 | Implement the Boolean retrieval model for the foll... | Implement a text summarization algorithm. [20] 40... |
-| Slip 21 | Implement a learning to rank algorithm (e.g., Rank... | Train the ranking model using labeled data and eva... |
-| Slip 22 | Given a collection of text documents, group simila... | Given a collection of text documents from the 20 N... |
-| Slip 23 | Implement the vector space model with TF-IDF weigh... | Calculate the cosine similarity between the query ... |
-| Slip 24 | Write a program to calculate precision, recall and... | Implement an inverted index construction algorithm... |
-| Slip 25 | Implement cosine similarity to find similarity bet... | Write a program to calculate precision, recall and... |
-| Slip 26 | Implement an inverted index construction algorithm... | Write a program to calculate precision, recall and... |
-| Slip 27 | Consider the following corpus documents = [ "The c... | Implement an inverted index construction algorithm... |
-| Slip 28 | Develop a spelling correction module using edit di... | Implement a clustering algorithm (e.g., K-means or... |
-| Slip 29 | Implement a text classification algorithm. [20]... | Train the classifier on a labeled dataset and eval... |
-| Slip 30 | Write a program to calculate precision, recall and... | Given a set of predicted binary labels (y_pred) an... |
-| Slip 31 | Implement a spelling correction module using edit ... | Given a set of predicted binary labels (y_pred) an... |
-| Slip 32 | Implement the Boolean retrieval model for the foll... | Consider the following corpus [20] documents = [ "... |
-| Slip 33 | Implement a text summarization algorithm (e.g., ex... | Write a program to find the edit distance between ... |
-| Slip 34 | Consider the following corpus documents = [ "The c... | Create a system that can summarize text data. The ... |
+| Slip | Part A Summary | Part B Summary | Source PDF | Page |
+|------|----------------|----------------|------------|------|
+| 1 | Implement an inverted index construction algorithm for the following two documents document1 = "The ... | Build a question-answering system using techniques such as information extraction. [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 1 |
+| 2 | Implement an inverted index construction algorithm for the following two documents: [20] document1 =... | Write a program to calculate precision, recall and F-measure where true positive is 60, false positi... | IR_Question_15_April_2025_900_1100 (2).pdf | 2 |
+| 3 | Develop a spelling correction module using edit distance algorithms and find the edit distance betwe... | Implement the Boolean retrieval model for the following corpus. [20] Document 1:The cat chased the d... | IR_Question_15_April_2025_900_1100 (2).pdf | 3 |
+| 4 | Develop a web crawler to fetch and index web pages. [20]... | Handle challenges such as robots.txt, dynamic content, and crawling delays. [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 4 |
+| 5 | Consider a simplified web graph with the following link structure: • Page A has links to pages B, C,... | Implement a text summarization algorithm (e.g., extractive or abstractive). [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 5 |
+| 6 | Implement cosine similarity to find similarity between following query and document. [20] query="gol... | Build a question-answering system using techniques such as information extraction. [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 6 |
+| 7 | Implement a text summarization algorithm (e.g., extractive or abstractive). [20]... | Implement the Boolean retrieval model for the following corpus [20] Document 1:BSc lectures start at... | IR_Question_15_April_2025_900_1100 (2).pdf | 8 |
+| 8 | Implement the vector space model with TF-IDF weighting for the following corpus: [20] Document 1: "D... | Calculate the cosine similarity between the query and each document from the above problem. [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 9 |
+| 9 | Write a program to calculate precision, recall and F-measure where true positive is 60, false positi... | Use an evaluation toolkit to measure average precision and other evaluation metrics. [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 10 |
+| 10 | Given a dataset of 20_newsgroups, build a classification model using Naïve Bayes classifier that can... | Given a dataset of 20_newsgroups, build a classification model using SVM classifier that can accurat... | IR_Question_15_April_2025_900_1100 (2).pdf | 11 |
+| 11 | Consider the following corpus: "India has the second-largest population in the world.", " It is surr... | Write a program to calculate precision, recall and F-measure where true positive is 60, false positi... | IR_Question_15_April_2025_900_1100 (2).pdf | 12 |
+| 12 | Consider a simplified web graph with the following link structure: • Page A has links to pages B, C,... | Write a program to calculate precision, recall and F-measure where true positive is 20, false positi... | IR_Question_15_April_2025_900_1100 (2).pdf | 13 |
+| 13 | Consider a web graph with the following link structure: [20] • Page A has links to pages B and C. • ... | Implement a text summarization algorithm [20] 40... | IR_Question_15_April_2025_900_1100 (2).pdf | 14 |
+| 14 | Implement the vector space model with TF-IDF weighting for the following corpus: [20] Document 1: "D... | Implement cosine similarity to find similarity between following query and document. [20] query="gol... | IR_Question_15_April_2025_900_1100 (2).pdf | 15 |
+| 15 | Apply the clustering algorithm(e.g., K-means or hierarchical clustering) for a given set of document... | Given a set of predicted binary labels (y_pred) and their corresponding true binary labels (y_true),... | IR_Question_15_April_2025_900_1100 (2).pdf | 16 |
+| 16 | Implement an inverted index construction algorithm for the following two documents: [20] document1 =... | Build a simple document retrieval system using the constructed index to find the documents containin... | IR_Question_15_April_2025_900_1100 (2).pdf | 2 |
+| 17 | Implement the vector space model with TF-IDF weighting for the following corpus: [20] Document 1: "T... | Implement a clustering algorithm (e.g., K-means or hierarchical clustering). Also, apply the cluster... | IR_Question_15_April_2025_900_1100 (2).pdf | 18 |
+| 18 | Consider a simplified web graph with the following link structure: • Page A has links to pages B, C,... | Implement the Boolean retrieval model for the following corpus [20] Document 1:The university exam i... | IR_Question_15_April_2025_900_1100 (2).pdf | 19 |
+| 19 | Consider the following corpus: "India has the second-largest population in the world.", " It is surr... | Create a system that can summarize text data. The given text data is as follows: [20] Natural langua... | IR_Question_15_April_2025_900_1100 (2).pdf | 20 |
+| 20 | Implement the Boolean retrieval model for the following corpus. [20] Document 1: 'this is the first ... | Implement a text summarization algorithm. [20] 40... | IR_Question_15_April_2025_1130_130.pdf | 1 |
+| 21 | Implement a learning to rank algorithm (e.g., RankSVM or RankBoost) on a given dataset. [20]... | Train the ranking model using labeled data and evaluate its effectiveness. [20] 40... | IR_Question_15_April_2025_1130_130.pdf | 6 |
+| 22 | Given a collection of text documents, group similar documents into clusters using the K-means cluste... | Given a collection of text documents from the 20 Newsgroups dataset, group similar documents into cl... | IR_Question_15_April_2025_1130_130.pdf | 9 |
+| 23 | Implement the vector space model with TF-IDF weighting for the following corpus: [20] Document 1: "T... | Calculate the cosine similarity between the query and each document. [20] 40... | IR_Question_15_April_2025_1130_130.pdf | 10 |
+| 24 | Write a program to calculate precision, recall and F-measure where true positive is 20, false positi... | Implement an inverted index construction algorithm for the following two documents document1 = "toda... | IR_Question_15_April_2025_1130_130.pdf | 11 |
+| 25 | Implement cosine similarity to find similarity between following query and document. [20] query="pyt... | Write a program to calculate precision, recall and F-measure where true positive is 20, false positi... | IR_Question_15_April_2025_1130_130.pdf | 12 |
+| 26 | Implement an inverted index construction algorithm for the following two documents: document1 = "bes... | Write a program to calculate precision, recall and F-measure where true positive is 20, false positi... | IR_Question_15_April_2025_1130_130.pdf | 13 |
+| 27 | Consider the following corpus documents = [ "The cat is on the mat.", "The dog is in the yard.", "A ... | Implement an inverted index construction algorithm for the following two documents document1 = "best... | IR_Question_15_April_2025_1130_130.pdf | 16 |
+| 28 | Develop a spelling correction module using edit distance algorithms and find the edit distance betwe... | Implement a clustering algorithm (e.g., K-means or hierarchical clustering). Also, apply the cluster... | IR_Question_16_April_2025_900_1100.pdf | 1 |
+| 29 | Implement a text classification algorithm. [20]... | Train the classifier on a labeled dataset and evaluate its performance. [20] 40... | IR_Question_16_April_2025_900_1100.pdf | 2 |
+| 30 | Write a program to calculate precision, recall and F-measure where true positive is 20, false positi... | Given a set of predicted binary labels (y_pred) and their corresponding true binary labels (y_true),... | IR_Question_16_April_2025_900_1100.pdf | 14 |
+| 31 | Implement a spelling correction module using edit distance for the following dictionary: dictionary ... | Given a set of predicted binary labels (y_pred) and their corresponding true binary labels (y_true),... | IR_Question_16_April_2025_900_1100.pdf | 16 |
+| 32 | Implement the Boolean retrieval model for the following corpus: [20] Document 1:The cat chased the d... | Consider the following corpus [20] documents = [ "The cat is on the mat.", "The dog is in the yard."... | IR_Question_16_April_2025_900_1100.pdf | 19 |
+| 33 | Implement a text summarization algorithm (e.g., extractive or abstractive). [20]... | Write a program to find the edit distance between strings “yellow” and “pillow”. [20] 40... | IR_Question_16_April_2025_1130_130.pdf | 14 |
+| 34 | Consider the following corpus documents = [ "The cat is on the mat.", "The dog is in the yard.", "A ... | Create a system that can summarize text data. The given text data is as follows: [20] Natural langua... | IR_Question_16_April_2025_1130_130.pdf | 17 |
