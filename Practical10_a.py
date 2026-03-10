@@ -1,7 +1,7 @@
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-nltk.download('punkt', quiet=True); nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True); nltk.download('punkt_tab', quiet=True); nltk.download('stopwords', quiet=True)
 def summarize(text):
     sw, words = set(stopwords.words("english")), word_tokenize(text)
     freq = {}
