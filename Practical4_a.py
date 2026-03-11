@@ -7,5 +7,8 @@ def calculate_metrics(retrieved, relevant):
     return p, r, f
 
 if __name__ == "__main__":
+    tp = 60
+    fp = 30
+    fn = 20
     p, r, f = calculate_metrics({"doc1", "doc2", "doc3"}, {"doc1", "doc4"})
     print(f"Precision: {p}\nRecall: {r}\nF-measure: {f}")
