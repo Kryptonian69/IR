@@ -13,5 +13,11 @@ def suggest_correction(word, word_list):
     return min(word_list, key=lambda w: levenshtein_distance(word, w))
 
 if __name__ == "__main__":
-    dictionary = ["hello", "world", "python", "spell", "correct", "algorithm"]
-    print(f"Correction for 'helo': {suggest_correction('helo', dictionary)}")
+    
+    s1, s2 = "nature", "creature"
+    print(f"Edit Distance between '{s1}' and '{s2}': {levenshtein_distance(s1, s2)}")
+
+    
+    dictionary = ["hello", "world", "python", "nature", "creature", "spell", "correct", "algorithm"]
+    word = "natur"
+    print(f"Correction for '{word}': {suggest_correction(word, dictionary)}")
